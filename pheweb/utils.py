@@ -173,7 +173,7 @@ assert pad_gene(200000, 800000) == (200000, 800000)
 def get_random_page():
     with open(os.path.join(conf['data_dir'], 'top_hits.json')) as f:
         hits = json.load(f)
-        hits_to_choose_from = [hit for hit in hits if hit['pval'] < 5e-8]
+        hits_to_choose_from = [hit for hit in hits if hit['pval'] < 5e-2]
         if not hits_to_choose_from:
             hits_to_choose_from = hits
         if not hits:
