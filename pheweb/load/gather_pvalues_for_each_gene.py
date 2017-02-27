@@ -54,7 +54,7 @@ def run(argv):
                 phenos_in_gene = sorted(best_assoc_for_pheno.values(), key=lambda a:a['pval'])
                 biggest_idx_to_include = 2
                 for idx in range(biggest_idx_to_include, len(phenos_in_gene)):
-                    if phenos_in_gene[idx]['pval'] < 5e-8:
+                    if phenos_in_gene[idx]['pval'] < 5e-2:
                         biggest_idx_to_include = idx
                     elif idx < 10 and phenos_in_gene[idx]['pval'] < 10 ** (-4 - idx//2):
                         # include at most ten phenos if they're not genome-wide significant.  I just made up this formula.
