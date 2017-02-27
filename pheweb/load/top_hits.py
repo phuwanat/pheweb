@@ -11,8 +11,8 @@ import csv
 # - Somewhere have a user-extendable whitelist of info that should be copied about each pheno.  Copy all of that stuff.
 
 
-LOCI_SPREAD_FROM_BEST_HIT = int(500e3)
-PVAL_CUTOFF = 1e-6
+LOCI_SPREAD_FROM_BEST_HIT = int(5e3)
+PVAL_CUTOFF = 5e-2
 
 def get_hits(pheno):
     fname = os.path.join(conf.data_dir, 'manhattan/{}.json'.format(pheno['phenocode']))
