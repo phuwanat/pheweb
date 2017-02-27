@@ -6,9 +6,9 @@ import json
 import csv
 import os.path
 
-LOCI_SPREAD_FROM_BEST_HIT = int(500e3)
+LOCI_SPREAD_FROM_BEST_HIT = int(5e3)
 LOCI_SPREAD_FROM_BEST_HIT_WITHIN_PHENOTYPE = int(1e6)
-PVAL_CUTOFF = 1e-6
+PVAL_CUTOFF = 5e-2
 
 def get_hits():
     phenos = utils.get_phenolist()
