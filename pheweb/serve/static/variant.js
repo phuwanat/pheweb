@@ -43,7 +43,7 @@
     $(function() {
         var svg_width = $('#phewas_plot_container').width();
         var svg_height = 550;
-        var significance_threshold = 0.05 / window.variant.phenos.length;
+        var significance_threshold = 0.05;
 
         var plot_margin = {
             'left': 70,
