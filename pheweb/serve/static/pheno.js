@@ -473,8 +473,8 @@ function populate_streamtable(variants) {
     $(function() {
         // This is mostly copied from <https://michigangenomics.org/health_data.html>.
         //var data = _.filter(variants, _.property('show_gene'));
-        var data = variants
-        //data = _.sortBy(data, _.property('pval'));
+        //var data = variants
+        var data = _.sortBy(variants, _.property('pval'));
         var template = _.template($('#streamtable-template').html());
         var view = function(variant) {
             return template({v: variant});
