@@ -68,10 +68,10 @@ function create_gwas_plot(variant_bins, unbinned_variants) {
             .attr("transform", fmt("translate({0},{1})", plot_margin.left, plot_margin.top));
 
         // Significance Threshold line
-        var significance_threshold = 5e-8;
+        var significance_threshold = 5e-2;
         var significance_threshold_tooltip = d3.tip()
             .attr('class', 'd3-tip')
-            .html('Significance Threshold: 5E-8')
+            .html('Significance Threshold: 5E-2')
             .offset([-8,0]);
         gwas_svg.call(significance_threshold_tooltip);
 
